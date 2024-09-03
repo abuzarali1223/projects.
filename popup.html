@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>popup</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+    }
+
+    body {
+        height: 100%;
+        background-image: url("https://picsum.photos/id/25/5000/3333");
+        background-size: cover;
+    }
+
+    .contianer {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.791);
+        align-items: center;
+        justify-content: center;
+        display: none;
+        transition: 500ms;
+    }
+
+    .content {
+        height: 350px;
+        width: 800px;
+        background-color: white;
+        box-shadow: 0 0 40px rgba(0, 0, 0, 0.508);
+        border-radius: 12px;
+        transition: 1s;
+        opacity: 0;
+    }
+
+    .show {
+        display: flex;
+    }
+
+    .tans{
+        opacity: 1;
+    }
+
+    .main-content {
+        padding: 15px;
+    }
+
+    h1,
+    p,
+    button {
+        margin-bottom: 15px;
+    }
+
+    button {
+        padding: 8px 16px;
+        background-color: #1A1A32;
+        color: white;
+    }
+    button:hover{
+        background-color: rgb(72, 67, 67);
+    }
+</style>
+
+<body>
+    <div class="contianer">
+        <div class="content">
+            <div class="main-content">
+                <h1>Cookies Policy</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque similique omnis dolor quaerat modi,
+                    hic perferendis dignissimos nemo itaque nobis suscipit adipisci quas mollitia saepe, totam excepturi
+                    magnam repudiandae, atque porro aliquam incidunt eveniet exercitationem. Dolor necessitatibus
+                    cupiditate ea perferendis consectetur esse obcaecati nemo incidunt. Cupiditate vel facilis non
+                    consectetur impedit, et nemo vitae quae asperiores accusantium voluptas nulla sit beatae? Dolorum,
+                    commodi eligendi iste pariatur error laudantium, delectus fugiat, reprehenderit dolor labore
+                    voluptatem quae. Sequi saepe a doloremque eius doloribus porro deleniti, error corrupti amet dicta
+                    reiciendis, fugiat ab architecto incidunt accusantium, nulla dolor ullam facilis hic minus
+                    dignissimos dolores? Corporis accusantium, animi, amet itaque suscipit consequatur ut doloremque
+                    earum voluptatum repellendus magni? Beatae, eligendi aperiam. Illo consectetur, beatae maxime
+                    nesciunt molestias recusandae voluptatibus quod iste culpa maiores aspernatur, provident assumenda
+                    cupiditate ab vero ipsam ipsa architecto rerum explicabo incidunt expedita fugiat totam. Dolorum
+                    commodi enim et illo explicabo eligendi dolore rem ea, vitae necessitatibus, maxime corrupti
+                    pariatur maiores.</p>
+
+                <button id="Accept">Accept Cookies</button>
+                <button id="Reject">Reject Cookies</button>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        let contianer = document.querySelector('.contianer')
+        let content = document.querySelector('.content')
+        let Accept = document.querySelector('#Accept')
+        let Reject = document.querySelector('#Reject')
+
+
+        setTimeout(function () {
+            contianer.classList.add('show')
+            setTimeout(function () {
+                content.classList.add('tans')
+            }, 100)
+        }, 1000)
+
+
+        Accept.addEventListener('click', function(){
+            contianer.classList.remove('show')
+        })
+
+        Reject.addEventListener('click', function(){
+            contianer.classList.remove('show')
+        })
+
+
+    </script>
+
+</body>
+
+</html>
