@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html,
+    body {
+        height: 100%;
+        width: 100%;
+    }
+
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #f0f0f0;
+    }
+
+    .swiper {
+        width: 80%;
+        height: 80%;
+        position: relative;
+    }
+
+    .swiper-slide img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        opacity: 1;
+        filter: blur(2px);
+    }
+
+    .swiper-slide .contentbox {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: rgb(255, 255, 255);
+        font-weight: 500;
+        z-index: 10;
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .contentbox p,
+    h3 {
+        margin-top: 10px;
+    }
+
+    h3 {
+        font-size: 40px;
+    }
+
+    .contentbox button {
+        margin-top: 15px;
+        height: 40px;
+        width: 150px;
+        border: none;
+        border-radius: 23px;
+        color: white;
+        border: 1px solid rgb(255, 255, 255);
+        background-color: rgba(240, 248, 255, 0.031);
+    }
+
+    button:hover {
+        background-color: black;
+
+    }
+</style>
+
+<body>
+    <div class="swiper">
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+                <img src="https://picsum.photos/id/3/5000/3333"
+                    alt="">
+                <div class="contentbox">
+                    <i class="fa-solid fa-house"></i>
+                    <h3>Modern Comfort Furniture </h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus impedit cum assumenda?</p>
+                    <button>Shop Now</button>
+                </div>
+
+            </div>
+            <div class="swiper-slide">
+                <img src="https://picsum.photos/id/12/2500/1667"
+                    alt="">
+                <div class="contentbox">
+                    <h3>Electronics Things </h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus impedit cum assumenda?</p>
+                    <button>Shop Now</button>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="https://picsum.photos/id/5/5000/3334"
+                    alt="">
+                <div class="contentbox">
+                    <i class="fa-solid fa-mug-hot"></i>
+                    <h3>Coffee Beans</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus impedit cum assumenda?</p>
+                    <button>Shop Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev" onclick="swiper.slidePrev()"></div>
+        <div class="swiper-button-next" onclick="swiper.slideNext()"></div>
+    </div>
+
+</body>
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+    const swiper = new Swiper('.swiper', {
+        speed: 400,
+        spaceBetween: 100,
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination'
+        }
+    });
+</script>
+
+</html>
